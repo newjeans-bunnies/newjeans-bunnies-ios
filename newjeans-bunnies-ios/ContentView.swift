@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLaunching: Bool = true
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if isLaunching {
+                SplashView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                isLaunching = false
+                            }
+                        }
+                    }
+            } else {
+                Login()
+            }
         }
-        .padding()
     }
 }
 
