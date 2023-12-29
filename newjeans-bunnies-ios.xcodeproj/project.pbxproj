@@ -7,22 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A087E042B3CF57B00701446 /* newjeans_bunnies_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E032B3CF57B00701446 /* newjeans_bunnies_iosApp.swift */; };
-		7A087E062B3CF57B00701446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E052B3CF57B00701446 /* ContentView.swift */; };
-		7A087E082B3CF57C00701446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E072B3CF57C00701446 /* Assets.xcassets */; };
-		7A087E0B2B3CF57C00701446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E0A2B3CF57C00701446 /* Preview Assets.xcassets */; };
+		7A087E3C2B3D1B2A00701446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E052B3CF57B00701446 /* ContentView.swift */; };
+		7A087E3D2B3D1B2A00701446 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E192B3D0DC200701446 /* Signup.swift */; };
+		7A087E3F2B3D1B2A00701446 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E032B3CF57B00701446 /* Auth.swift */; };
+		7A087E402B3D1B2A00701446 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E132B3CF73900701446 /* SplashView.swift */; };
+		7A087E412B3D1B2A00701446 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A087E172B3D0DB700701446 /* Login.swift */; };
+		7A087E442B3D1B2A00701446 /* pretendard_extra_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E272B3D0FDE00701446 /* pretendard_extra_bold.otf */; };
+		7A087E452B3D1B2A00701446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E0A2B3CF57C00701446 /* Preview Assets.xcassets */; };
+		7A087E462B3D1B2A00701446 /* pretendard_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E252B3D0FDE00701446 /* pretendard_medium.otf */; };
+		7A087E472B3D1B2A00701446 /* pretendard_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E282B3D0FDE00701446 /* pretendard_light.otf */; };
+		7A087E482B3D1B2A00701446 /* pretendard_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E242B3D0FDE00701446 /* pretendard_bold.otf */; };
+		7A087E492B3D1B2A00701446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E072B3CF57C00701446 /* Assets.xcassets */; };
+		7A087E4A2B3D1B2A00701446 /* pretendard_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E2A2B3D0FDE00701446 /* pretendard_thin.otf */; };
+		7A087E4B2B3D1B2A00701446 /* pretendard_semi_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E262B3D0FDE00701446 /* pretendard_semi_bold.otf */; };
+		7A087E4C2B3D1B2A00701446 /* pretendard_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A087E292B3D0FDE00701446 /* pretendard_regular.otf */; };
+		7AD3DDD62B3D85CE00B4EE55 /* CustomToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DDD52B3D85CE00B4EE55 /* CustomToggleStyle.swift */; };
+		7AE2CB672B3D4A4300270F27 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CB662B3D4A4300270F27 /* Fonts.swift */; };
+		7AE2CB6A2B3D526000270F27 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CB692B3D526000270F27 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A087E002B3CF57B00701446 /* newjeans-bunnies-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "newjeans-bunnies-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A087E032B3CF57B00701446 /* newjeans_bunnies_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newjeans_bunnies_iosApp.swift; sourceTree = "<group>"; };
+		7A087E032B3CF57B00701446 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		7A087E052B3CF57B00701446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A087E072B3CF57C00701446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A087E0A2B3CF57C00701446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A087E132B3CF73900701446 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7A087E172B3D0DB700701446 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		7A087E192B3D0DC200701446 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		7A087E242B3D0FDE00701446 /* pretendard_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_bold.otf; path = ../../../../../../../Desktop/font/pretendard_bold.otf; sourceTree = "<group>"; };
+		7A087E252B3D0FDE00701446 /* pretendard_medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_medium.otf; path = ../../../../../../../Desktop/font/pretendard_medium.otf; sourceTree = "<group>"; };
+		7A087E262B3D0FDE00701446 /* pretendard_semi_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_semi_bold.otf; path = ../../../../../../../Desktop/font/pretendard_semi_bold.otf; sourceTree = "<group>"; };
+		7A087E272B3D0FDE00701446 /* pretendard_extra_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_extra_bold.otf; path = ../../../../../../../Desktop/font/pretendard_extra_bold.otf; sourceTree = "<group>"; };
+		7A087E282B3D0FDE00701446 /* pretendard_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_light.otf; path = ../../../../../../../Desktop/font/pretendard_light.otf; sourceTree = "<group>"; };
+		7A087E292B3D0FDE00701446 /* pretendard_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_regular.otf; path = ../../../../../../../Desktop/font/pretendard_regular.otf; sourceTree = "<group>"; };
+		7A087E2A2B3D0FDE00701446 /* pretendard_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pretendard_thin.otf; path = ../../../../../../../Desktop/font/pretendard_thin.otf; sourceTree = "<group>"; };
+		7A087E502B3D1B2A00701446 /* newjeans-bunnies-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "newjeans-bunnies-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A72B97D2B3D39EF00CFD9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD3DDD52B3D85CE00B4EE55 /* CustomToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggleStyle.swift; sourceTree = "<group>"; };
+		7AE2CB662B3D4A4300270F27 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		7AE2CB692B3D526000270F27 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7A087DFD2B3CF57B00701446 /* Frameworks */ = {
+		7A087E422B3D1B2A00701446 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,7 +70,7 @@
 		7A087E012B3CF57B00701446 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A087E002B3CF57B00701446 /* newjeans-bunnies-ios.app */,
+				7A087E502B3D1B2A00701446 /* newjeans-bunnies-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +78,13 @@
 		7A087E022B3CF57B00701446 /* newjeans-bunnies-ios */ = {
 			isa = PBXGroup;
 			children = (
-				7A087E032B3CF57B00701446 /* newjeans_bunnies_iosApp.swift */,
 				7A087E052B3CF57B00701446 /* ContentView.swift */,
+				7A087E132B3CF73900701446 /* SplashView.swift */,
+				7A087E1B2B3D0F3700701446 /* designsystem */,
+				7A087E122B3CF6E300701446 /* auth */,
 				7A087E072B3CF57C00701446 /* Assets.xcassets */,
 				7A087E092B3CF57C00701446 /* Preview Content */,
+				7A72B97D2B3D39EF00CFD9F5 /* Info.plist */,
 			);
 			path = "newjeans-bunnies-ios";
 			sourceTree = "<group>";
@@ -67,16 +97,59 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7A087E122B3CF6E300701446 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				7A087E172B3D0DB700701446 /* Login.swift */,
+				7A087E192B3D0DC200701446 /* Signup.swift */,
+				7A087E032B3CF57B00701446 /* Auth.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		7A087E1B2B3D0F3700701446 /* designsystem */ = {
+			isa = PBXGroup;
+			children = (
+				7AE2CB682B3D523F00270F27 /* color */,
+				7A087E1C2B3D0F4600701446 /* fonts */,
+				7AD3DDD52B3D85CE00B4EE55 /* CustomToggleStyle.swift */,
+			);
+			path = designsystem;
+			sourceTree = "<group>";
+		};
+		7A087E1C2B3D0F4600701446 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A087E242B3D0FDE00701446 /* pretendard_bold.otf */,
+				7A087E272B3D0FDE00701446 /* pretendard_extra_bold.otf */,
+				7A087E282B3D0FDE00701446 /* pretendard_light.otf */,
+				7A087E252B3D0FDE00701446 /* pretendard_medium.otf */,
+				7A087E292B3D0FDE00701446 /* pretendard_regular.otf */,
+				7A087E262B3D0FDE00701446 /* pretendard_semi_bold.otf */,
+				7A087E2A2B3D0FDE00701446 /* pretendard_thin.otf */,
+				7AE2CB662B3D4A4300270F27 /* Fonts.swift */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		7AE2CB682B3D523F00270F27 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				7AE2CB692B3D526000270F27 /* Color.swift */,
+			);
+			path = color;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A087DFF2B3CF57B00701446 /* newjeans-bunnies-ios */ = {
+		7A087E3A2B3D1B2A00701446 /* newjeans-bunnies-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A087E0E2B3CF57C00701446 /* Build configuration list for PBXNativeTarget "newjeans-bunnies-ios" */;
+			buildConfigurationList = 7A087E4D2B3D1B2A00701446 /* Build configuration list for PBXNativeTarget "newjeans-bunnies-ios" */;
 			buildPhases = (
-				7A087DFC2B3CF57B00701446 /* Sources */,
-				7A087DFD2B3CF57B00701446 /* Frameworks */,
-				7A087DFE2B3CF57B00701446 /* Resources */,
+				7A087E3B2B3D1B2A00701446 /* Sources */,
+				7A087E422B3D1B2A00701446 /* Frameworks */,
+				7A087E432B3D1B2A00701446 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,7 +157,7 @@
 			);
 			name = "newjeans-bunnies-ios";
 			productName = "newjeans-bunnies-ios";
-			productReference = 7A087E002B3CF57B00701446 /* newjeans-bunnies-ios.app */;
+			productReference = 7A087E502B3D1B2A00701446 /* newjeans-bunnies-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,8 +170,8 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					7A087DFF2B3CF57B00701446 = {
-						CreatedOnToolsVersion = 15.1;
+					7A087E3A2B3D1B2A00701446 = {
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -115,30 +188,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A087DFF2B3CF57B00701446 /* newjeans-bunnies-ios */,
+				7A087E3A2B3D1B2A00701446 /* newjeans-bunnies-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7A087DFE2B3CF57B00701446 /* Resources */ = {
+		7A087E432B3D1B2A00701446 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A087E0B2B3CF57C00701446 /* Preview Assets.xcassets in Resources */,
-				7A087E082B3CF57C00701446 /* Assets.xcassets in Resources */,
+				7A087E442B3D1B2A00701446 /* pretendard_extra_bold.otf in Resources */,
+				7A087E452B3D1B2A00701446 /* Preview Assets.xcassets in Resources */,
+				7A087E462B3D1B2A00701446 /* pretendard_medium.otf in Resources */,
+				7A087E472B3D1B2A00701446 /* pretendard_light.otf in Resources */,
+				7A087E482B3D1B2A00701446 /* pretendard_bold.otf in Resources */,
+				7A087E492B3D1B2A00701446 /* Assets.xcassets in Resources */,
+				7A087E4A2B3D1B2A00701446 /* pretendard_thin.otf in Resources */,
+				7A087E4B2B3D1B2A00701446 /* pretendard_semi_bold.otf in Resources */,
+				7A087E4C2B3D1B2A00701446 /* pretendard_regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7A087DFC2B3CF57B00701446 /* Sources */ = {
+		7A087E3B2B3D1B2A00701446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A087E062B3CF57B00701446 /* ContentView.swift in Sources */,
-				7A087E042B3CF57B00701446 /* newjeans_bunnies_iosApp.swift in Sources */,
+				7AE2CB6A2B3D526000270F27 /* Color.swift in Sources */,
+				7A087E3C2B3D1B2A00701446 /* ContentView.swift in Sources */,
+				7A087E3D2B3D1B2A00701446 /* Signup.swift in Sources */,
+				7AE2CB672B3D4A4300270F27 /* Fonts.swift in Sources */,
+				7AD3DDD62B3D85CE00B4EE55 /* CustomToggleStyle.swift in Sources */,
+				7A087E3F2B3D1B2A00701446 /* Auth.swift in Sources */,
+				7A087E402B3D1B2A00701446 /* SplashView.swift in Sources */,
+				7A087E412B3D1B2A00701446 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,17 +350,19 @@
 			};
 			name = Release;
 		};
-		7A087E0F2B3CF57C00701446 /* Debug */ = {
+		7A087E4E2B3D1B2A00701446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"newjeans-bunnies-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = F2C5ZWGQUJ;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/hamtory/Documents/github/iOS/newjeans-bunnies-ios/newjeans-bunnies-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,22 +376,27 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Project.newjeans-bunnies-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7A087E102B3CF57C00701446 /* Release */ = {
+		7A087E4F2B3D1B2A00701446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"newjeans-bunnies-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = F2C5ZWGQUJ;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/hamtory/Documents/github/iOS/newjeans-bunnies-ios/newjeans-bunnies-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +410,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Project.newjeans-bunnies-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,11 +429,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A087E0E2B3CF57C00701446 /* Build configuration list for PBXNativeTarget "newjeans-bunnies-ios" */ = {
+		7A087E4D2B3D1B2A00701446 /* Build configuration list for PBXNativeTarget "newjeans-bunnies-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A087E0F2B3CF57C00701446 /* Debug */,
-				7A087E102B3CF57C00701446 /* Release */,
+				7A087E4E2B3D1B2A00701446 /* Debug */,
+				7A087E4F2B3D1B2A00701446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
