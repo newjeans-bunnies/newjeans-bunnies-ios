@@ -6,24 +6,14 @@
 //
 
 import SwiftUI
+import FlowKit
 
 struct ContentView: View {
     @State var isLaunching: Bool = true
 
     var body: some View {
         VStack {
-            if isLaunching {
-                SplashView()
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            withAnimation(.easeIn(duration: 0.2)) {
-                                isLaunching = false
-                            }
-                        }
-                    }
-            } else {
-                Login()
-            }
+          FlowPresenter(rootView: SplashView())
         }
     }
 }

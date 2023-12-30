@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import FlowKit
 
 struct SplashView: View {
+    @State var isLaunching: Bool = true
+    @Flow var navigation
+    
     var body: some View {
-        Image("ic_app")
-            .resizable()
-            .frame(width:200, height: 92)
+        VStack{
+            Image("ic_app")
+                .resizable()
+                .frame(width:200, height: 92)
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                navigation.push(Login())
+            }
+        }
     }
 }
 
