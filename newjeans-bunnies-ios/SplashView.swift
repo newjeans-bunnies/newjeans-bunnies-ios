@@ -19,7 +19,7 @@ struct SplashView: View {
                 .frame(width:200, height: 92)
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                navigation.push(Login())
+                navigation.replace([Login()], animated: false)
             }
         }
     }

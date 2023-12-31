@@ -16,7 +16,8 @@ struct CustomToggleStyle: ToggleStyle {
 
         }, label: {
             HStack {
-                Image(configuration.isOn ? "check_box_true" : "check_box_falue")
+                Image(configuration.isOn ? "ic_check_box_true" : "ic_check_box_falue")
+                    .animation(nil)
             }
         })
         .buttonStyle(PlainButtonStyle())

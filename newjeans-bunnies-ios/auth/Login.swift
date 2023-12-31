@@ -7,12 +7,14 @@
 
 
 import SwiftUI
+import FlowKit
 
 
 struct Login: View {
     @State var userId: String = ""
     @State var password: String = ""
     @State var autoLoginStatus: Bool = false
+    @Flow var navigation
 
     var body: some View {
         VStack {
@@ -20,7 +22,7 @@ struct Login: View {
                 .resizable()
                 .frame(width:200, height: 100)
                 .padding(.bottom, 90)
-
+            
             HStack(alignment: .center) {
                 Image("ic_id")
                     .padding(.leading, 5)
@@ -29,11 +31,11 @@ struct Login: View {
                     .font(.custom(pretendardMedium, size: 18))
                 )
                 .padding(.leading, 6)
-
+                
             }
-                .padding()
-                .background(FieldBackgroundColor)
-                .cornerRadius(13)
+            .padding()
+            .background(FieldBackgroundColor)
+            .cornerRadius(13)
             
             
             HStack(alignment: .center) {
@@ -43,12 +45,12 @@ struct Login: View {
                     .foregroundColor(FieldHintTextColor)
                     .font(.custom(pretendardMedium, size: 18))
                 )
-                .padding(.leading, 6)
+                .padding(.leading, 9)
             }
             
-                .padding()
-                .background(FieldBackgroundColor)
-                .cornerRadius(13)
+            .padding()
+            .background(FieldBackgroundColor)
+            .cornerRadius(13)
             
             Text("아이디와 비밀번호가 일치하지 않습니다")
                 .padding(.leading, 10)
@@ -56,7 +58,7 @@ struct Login: View {
                 .font(.custom(pretendardMedium, size: 14))
                 .foregroundColor(ErrorTextColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 20)
+                .padding(.bottom, 10)
             
             
             HStack(alignment: .center){
@@ -68,31 +70,29 @@ struct Login: View {
             .padding(.trailing, 180)
             .padding(.bottom, 5)
             .frame(maxWidth: .infinity)
-              Button(action: {
-                  
-              }, label: {
-                  Text("로그인")
-                      .font(.custom(pretendardBold, size: 17))
-                      .foregroundColor(ButtonTextColor)
-                      .frame(maxWidth: .infinity)
-                    }
-              )
-              .controlSize(.large)
-              .buttonStyle(PlainButtonStyle())
-              .padding()
-                .background(ButtonBackgroundColor)
-                .cornerRadius(13)
+            Button(action: {
+                
+            }, label: {
+                Text("로그인")
+                    .font(.custom(pretendardBold, size: 17))
+                    .foregroundColor(ButtonTextColor)
+                    .frame(maxWidth: .infinity)
+            }
+            )
+            .controlSize(.large)
+            .buttonStyle(PlainButtonStyle())
+            .padding()
+            .background(ButtonBackgroundColor)
+            .cornerRadius(13)
             
             Text("계정 만들기")
                 .font(.custom(pretendardMedium, size: 16))
                 .padding(.top, 10)
                 .onTapGesture {
-                    print("Signup")
+                    navigation.push(Signup())
                 }
             
         }.padding(.horizontal, 30)
-
-
     }
 }
 
