@@ -11,11 +11,16 @@ import FlowKit
 
 
 struct Login: View {
+    
     @State var userId: String = ""
     @State var password: String = ""
+    
+    @State var passwordHideStatus: Bool = true
     @State var autoLoginStatus: Bool = false
+    
+    
     @Flow var navigation
-
+    
     var body: some View {
         VStack {
             Image("ic_app")
@@ -30,6 +35,7 @@ struct Login: View {
                     .foregroundColor(FieldHintTextColor)
                     .font(.custom(pretendardMedium, size: 18))
                 )
+                .textInputAutocapitalization(.never)
                 .padding(.leading, 6)
                 
             }
@@ -40,14 +46,36 @@ struct Login: View {
             
             HStack(alignment: .center) {
                 Image("ic_password")
-                    .padding(.leading, 7)
-                TextField("비밀번호", text: $password, prompt:Text("비밀번호")
-                    .foregroundColor(FieldHintTextColor)
-                    .font(.custom(pretendardMedium, size: 18))
-                )
-                .padding(.leading, 9)
+                    .padding(.leading, 7.0)
+                if passwordHideStatus{
+                    SecureField("비밀번호", text: $password, prompt:Text("비밀번호")
+                        .foregroundColor(FieldHintTextColor)
+                        .font(.custom(pretendardMedium, size: 18))
+                    )
+                    .foregroundColor(FieldTextColor)
+                    .textInputAutocapitalization(.never)
+                    .textContentType(.password)
+                    .keyboardType(.asciiCapable)
+                    .padding(.leading, 9)
+                    .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                } else {
+                    TextField("비밀번호", text: $password, prompt:Text("비밀번호")
+                        .foregroundColor(FieldHintTextColor)
+                        .font(.custom(pretendardMedium, size: 18))
+                    )
+                    .foregroundColor(FieldTextColor)
+                    .textInputAutocapitalization(.never)
+                    .textContentType(.password)
+                    .keyboardType(.asciiCapable)
+                    .padding(.leading, 9)
+                    .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }
+                
+                Toggle(isOn: $passwordHideStatus){}
+                    .toggleStyle(PasswordHideToggleStyle())
+                    .padding(.trailing, 9)
+                
             }
-            
             .padding()
             .background(FieldBackgroundColor)
             .cornerRadius(13)
@@ -63,13 +91,15 @@ struct Login: View {
             
             HStack(alignment: .center){
                 Toggle(isOn: $autoLoginStatus){}
-                    .toggleStyle(CustomToggleStyle())
+                    .toggleStyle(CheckBoxToggleStyle())
                 Text("로그인 유지하기")
                     .font(.custom(pretendardSemiBold, size: 16))
             }
             .padding(.trailing, 180)
             .padding(.bottom, 5)
             .frame(maxWidth: .infinity)
+            
+            
             Button(action: {
                 
             }, label: {
