@@ -11,15 +11,13 @@ import FlowKit
 
 
 struct Login: View {
+
+    @StateObject var viewModel = LoginViewModel()
     
-    @State var userId: String = ""
-    @State var password: String = ""
+    @Flow var navigation
     
     @State var passwordHideStatus: Bool = true
     @State var autoLoginStatus: Bool = false
-    
-    
-    @Flow var navigation
     
     var body: some View {
         VStack {
@@ -31,7 +29,7 @@ struct Login: View {
             HStack(alignment: .center) {
                 Image("ic_id")
                     .padding(.leading, 5)
-                TextField("아이디", text: $userId, prompt:Text("아이디")
+                TextField("아이디", text: $viewModel.userId, prompt:Text("아이디")
                     .foregroundColor(FieldHintTextColor)
                     .font(.custom(pretendardMedium, size: 18))
                 )
@@ -47,8 +45,8 @@ struct Login: View {
             HStack(alignment: .center) {
                 Image("ic_password")
                     .padding(.leading, 7.0)
-                if passwordHideStatus{
-                    SecureField("비밀번호", text: $password, prompt:Text("비밀번호")
+                if passwordHideStatus {
+                    SecureField("비밀번호", text: $viewModel.password, prompt:Text("비밀번호")
                         .foregroundColor(FieldHintTextColor)
                         .font(.custom(pretendardMedium, size: 18))
                     )
@@ -59,7 +57,7 @@ struct Login: View {
                     .padding(.leading, 9)
                     .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 } else {
-                    TextField("비밀번호", text: $password, prompt:Text("비밀번호")
+                    TextField("비밀번호", text: $viewModel.password, prompt:Text("비밀번호")
                         .foregroundColor(FieldHintTextColor)
                         .font(.custom(pretendardMedium, size: 18))
                     )
@@ -79,14 +77,15 @@ struct Login: View {
             .padding()
             .background(FieldBackgroundColor)
             .cornerRadius(13)
-            
-            Text("아이디와 비밀번호가 일치하지 않습니다")
-                .padding(.leading, 10)
-                .padding(.top, 3)
-                .font(.custom(pretendardMedium, size: 14))
-                .foregroundColor(ErrorTextColor)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 10)
+            if viewModel.loginStatus == false {
+                Text("아이디와 비밀번호가 일치하지 않습니다")
+                    .padding(.leading, 10)
+                    .padding(.top, 3)
+                    .font(.custom(pretendardMedium, size: 14))
+                    .foregroundColor(ErrorTextColor)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom, 10)
+            }
             
             
             HStack(alignment: .center){
@@ -97,11 +96,12 @@ struct Login: View {
             }
             .padding(.trailing, 180)
             .padding(.bottom, 5)
+            .padding(.top, 30)
             .frame(maxWidth: .infinity)
             
             
             Button(action: {
-                
+                viewModel.login()
             }, label: {
                 Text("로그인")
                     .font(.custom(pretendardBold, size: 17))
