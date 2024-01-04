@@ -13,13 +13,7 @@ struct TokenResponseDto: Codable {
     let refreshToken: String
     let expiredAt: String
     let authority: String
-    
-    enum CodingKeys: CodingKey {
-        case accessToken
-        case refreshToken
-        case expiredAt
-        case authority
-    }
+
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)

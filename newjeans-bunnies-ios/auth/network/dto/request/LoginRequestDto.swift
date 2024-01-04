@@ -7,13 +7,7 @@
 
 import Foundation
 
-
-struct LoginRequestDto: Codable {
+struct LoginRequestDto: Encodable{
     let userId: String
     let password: String
-    
-    private enum CodingKeys: CodingKey {
-        case userId
-        case password
-    }
 }
