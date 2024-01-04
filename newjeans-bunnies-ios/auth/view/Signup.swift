@@ -40,13 +40,15 @@ struct Signup: View {
                         .resizable()
                         .frame(width:10, height: 18)
                 }).frame(alignment: .leading)
+                    
                 Text("회원가입")
                     .font(.custom(pretendardBold, size: 20))
+                
             }.frame(maxWidth: .infinity, maxHeight: 50,alignment: .center)
-            
             
             Text("아이디")
                 .font(.custom(pretendardSemiBold, size: 17))
+            
             HStack(alignment: .center) {
                 TextField("아이디", text: $userId, prompt:Text("아이디").foregroundColor(FieldHintTextColor))
                     .onChange(of: userId) { oldText, newText in
@@ -80,8 +82,10 @@ struct Signup: View {
                 .cornerRadius(13)
             }
             
+            
             Text("비밀번호")
                 .font(.custom(pretendardSemiBold, size: 17))
+            
             HStack(alignment: .center) {
                 if passwordHideStatus{
                     SecureField("비밀번호", text: $password, prompt:Text("비밀번호")
@@ -111,6 +115,7 @@ struct Signup: View {
             .padding()
             .background(FieldBackgroundColor)
             .cornerRadius(13)
+            
             HStack(alignment: .center) {
                 if checkPasswordHideStatus{
                     SecureField("비밀번호 확인", text: $checkPassword, prompt:Text("비밀번호 확인")
@@ -143,6 +148,7 @@ struct Signup: View {
             
             Text("전화번호")
                 .font(.custom(pretendardSemiBold, size: 17))
+            
             HStack(alignment: .center) {
                 TextField("전화번호", text: $phoneNumber, prompt:Text("전화번호").foregroundColor(FieldHintTextColor))
                     .onChange(of: phoneNumber) { oldText, newText in
@@ -233,6 +239,7 @@ struct Signup: View {
             
         }
         .padding(.horizontal, 30)
+        .navigationBarHidden(true)
     }
 }
 
