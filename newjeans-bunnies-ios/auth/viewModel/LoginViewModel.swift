@@ -7,12 +7,15 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
 
 class LoginViewModel: ObservableObject{
     
     var userId: String = ""
     var password: String = ""
+    
     @Published var loginStatus: Bool?
+    @Published var autoLoginStatus: Bool = false
     
     func login(){
         let requestDto = LoginRequestDto(userId: self.userId, password: self.password)
@@ -28,14 +31,24 @@ class LoginViewModel: ObservableObject{
             switch response.result {
             case .success(let value):
                 print("성공하였습니다 :: \(value)")
-                self.loginStatus = true
+                withAnimation(.linear(duration: 0.1)){
+                    self.loginStatus = true
+                }
+                
+                if self.autoLoginStatus{
+                    
+                }
             case .failure(let error):
                 if let data = response.data,
                     let errorResponse = try? JSONDecoder().decode(ErrorResponseDto.self, from: data){
                     print("실패하였습니다 :: \(errorResponse)" )
-                    self.loginStatus = false
+                    withAnimation(.linear(duration: 0.1)){
+                        self.loginStatus = false
+                    }
                 } else {
-                    self.loginStatus = false
+                    withAnimation(.linear(duration: 0.1)){
+                        self.loginStatus = false
+                    }
                     print("실패하였습니다 :: \(error)" )
                 }
                    

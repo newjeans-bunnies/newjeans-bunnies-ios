@@ -17,7 +17,6 @@ struct Login: View {
     @Flow var navigation
     
     @State var passwordHideStatus: Bool = true
-    @State var autoLoginStatus: Bool = false
     
     var body: some View {
         VStack {
@@ -30,7 +29,7 @@ struct Login: View {
                 Image("ic_id")
                     .padding(.leading, 5)
                 TextField("아이디", text: $viewModel.userId, prompt:Text("아이디")
-                    .foregroundColor(FieldHintTextColor)
+                    .foregroundColor(Color("FieldHintTextColor"))
                     .font(.custom(pretendardMedium, size: 18))
                 )
                 .textInputAutocapitalization(.never)
@@ -38,7 +37,7 @@ struct Login: View {
                 
             }
             .padding()
-            .background(FieldBackgroundColor)
+            .background(Color("FieldBackgroundColor"))
             .cornerRadius(13)
             
             
@@ -47,10 +46,10 @@ struct Login: View {
                     .padding(.leading, 7.0)
                 if passwordHideStatus {
                     SecureField("비밀번호", text: $viewModel.password, prompt:Text("비밀번호")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
@@ -58,10 +57,10 @@ struct Login: View {
                     .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 } else {
                     TextField("비밀번호", text: $viewModel.password, prompt:Text("비밀번호")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
@@ -75,28 +74,27 @@ struct Login: View {
                 
             }
             .padding()
-            .background(FieldBackgroundColor)
+            .background(Color("FieldBackgroundColor"))
             .cornerRadius(13)
-            if viewModel.loginStatus == false {
+        
                 Text("아이디와 비밀번호가 일치하지 않습니다")
                     .padding(.leading, 10)
                     .padding(.top, 3)
                     .font(.custom(pretendardMedium, size: 14))
-                    .foregroundColor(ErrorTextColor)
+                    .foregroundColor(Color("ErrorTextColor"))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 10)
-            }
-            
+                    .opacity(viewModel.loginStatus ?? true ? 0 : 1)
             
             HStack(alignment: .center){
-                Toggle(isOn: $autoLoginStatus){}
+                Toggle(isOn: $viewModel.autoLoginStatus){}
                     .toggleStyle(CheckBoxToggleStyle())
                 Text("로그인 유지하기")
                     .font(.custom(pretendardSemiBold, size: 16))
             }
             .padding(.trailing, 180)
             .padding(.bottom, 5)
-            .padding(.top, 30)
+            .padding(.top, 10)
             .frame(maxWidth: .infinity)
             
             
@@ -105,14 +103,14 @@ struct Login: View {
             }, label: {
                 Text("로그인")
                     .font(.custom(pretendardBold, size: 17))
-                    .foregroundColor(ButtonTextColor)
+                    .foregroundColor(Color("ButtonTextColor"))
                     .frame(maxWidth: .infinity)
             }
             )
             .controlSize(.large)
             .buttonStyle(PlainButtonStyle())
             .padding()
-            .background(ButtonBackgroundColor)
+            .background(Color("ButtonBackgroundColor"))
             .cornerRadius(13)
             
             Text("계정 만들기")
@@ -124,6 +122,7 @@ struct Login: View {
             
         }.padding(.horizontal, 30)
     }
+
 }
 
 #Preview {
