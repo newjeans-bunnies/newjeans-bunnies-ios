@@ -28,11 +28,13 @@
 		7A99D2312B4524FF00F1626C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2302B4524FF00F1626C /* Constant.swift */; };
 		7A99D2342B452BFF00F1626C /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2332B452BFF00F1626C /* URL.swift */; };
 		7A99D2392B45367400F1626C /* LoginRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2382B45367400F1626C /* LoginRequestDto.swift */; };
-		7A99D23B2B45373200F1626C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D23A2B45373200F1626C /* HTTPClient.swift */; };
 		7A99D23D2B4537B900F1626C /* TokenResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D23C2B4537B900F1626C /* TokenResponseDto.swift */; };
 		7A99D2402B456B2F00F1626C /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 7A99D23F2B456B2F00F1626C /* SwiftKeychainWrapper */; };
 		7A99D2422B456B6A00F1626C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2412B456B6A00F1626C /* Keychain.swift */; };
 		7A99D2442B45717100F1626C /* SignupRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2432B45717100F1626C /* SignupRequestDto.swift */; };
+		7A99D2492B46418100F1626C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D2482B46418100F1626C /* LoginViewModel.swift */; };
+		7A99D24B2B46418D00F1626C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D24A2B46418D00F1626C /* SignupViewModel.swift */; };
+		7A99D24D2B46DAEB00F1626C /* ErrorResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D24C2B46DAEB00F1626C /* ErrorResponseDto.swift */; };
 		7AD3DDD62B3D85CE00B4EE55 /* CheckBoxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3DDD52B3D85CE00B4EE55 /* CheckBoxToggleStyle.swift */; };
 		7AD3DDDA2B3EDEA500B4EE55 /* FlowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3DDD92B3EDEA500B4EE55 /* FlowKit */; };
 		7AE2CB672B3D4A4300270F27 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CB662B3D4A4300270F27 /* Fonts.swift */; };
@@ -62,10 +64,12 @@
 		7A99D2302B4524FF00F1626C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7A99D2332B452BFF00F1626C /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		7A99D2382B45367400F1626C /* LoginRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDto.swift; sourceTree = "<group>"; };
-		7A99D23A2B45373200F1626C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		7A99D23C2B4537B900F1626C /* TokenResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponseDto.swift; sourceTree = "<group>"; };
 		7A99D2412B456B6A00F1626C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		7A99D2432B45717100F1626C /* SignupRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequestDto.swift; sourceTree = "<group>"; };
+		7A99D2482B46418100F1626C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7A99D24A2B46418D00F1626C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		7A99D24C2B46DAEB00F1626C /* ErrorResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDto.swift; sourceTree = "<group>"; };
 		7AD3DDD52B3D85CE00B4EE55 /* CheckBoxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxToggleStyle.swift; sourceTree = "<group>"; };
 		7AE2CB662B3D4A4300270F27 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7AE2CB692B3D526000270F27 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		7A087E122B3CF6E300701446 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				7A99D2472B4640F700F1626C /* viewModel */,
 				7A99D2322B4527D000F1626C /* network */,
 				7A99D22F2B45245800F1626C /* view */,
 			);
@@ -193,7 +198,6 @@
 			children = (
 				7A99D2352B45328400F1626C /* dto */,
 				7A99D2332B452BFF00F1626C /* URL.swift */,
-				7A99D23A2B45373200F1626C /* HTTPClient.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -220,8 +224,18 @@
 			isa = PBXGroup;
 			children = (
 				7A99D23C2B4537B900F1626C /* TokenResponseDto.swift */,
+				7A99D24C2B46DAEB00F1626C /* ErrorResponseDto.swift */,
 			);
 			path = response;
+			sourceTree = "<group>";
+		};
+		7A99D2472B4640F700F1626C /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7A99D2482B46418100F1626C /* LoginViewModel.swift */,
+				7A99D24A2B46418D00F1626C /* SignupViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		7AE2CB682B3D523F00270F27 /* color */ = {
@@ -325,17 +339,19 @@
 				7A087E3C2B3D1B2A00701446 /* ContentView.swift in Sources */,
 				7A087E3D2B3D1B2A00701446 /* Signup.swift in Sources */,
 				7AE2CB672B3D4A4300270F27 /* Fonts.swift in Sources */,
+				7A99D24B2B46418D00F1626C /* SignupViewModel.swift in Sources */,
 				7A99D22B2B441C8900F1626C /* SelectCountryRadioButton.swift in Sources */,
 				7A99D2342B452BFF00F1626C /* URL.swift in Sources */,
 				7A99D2262B440CCE00F1626C /* TextRule.swift in Sources */,
 				7A99D2442B45717100F1626C /* SignupRequestDto.swift in Sources */,
+				7A99D24D2B46DAEB00F1626C /* ErrorResponseDto.swift in Sources */,
 				7AD3DDD62B3D85CE00B4EE55 /* CheckBoxToggleStyle.swift in Sources */,
 				7A087E3F2B3D1B2A00701446 /* Auth.swift in Sources */,
 				7A99D2292B44114900F1626C /* PasswordHideToggleStyle.swift in Sources */,
 				7A087E402B3D1B2A00701446 /* SplashView.swift in Sources */,
-				7A99D23B2B45373200F1626C /* HTTPClient.swift in Sources */,
 				7A99D2392B45367400F1626C /* LoginRequestDto.swift in Sources */,
 				7A087E412B3D1B2A00701446 /* Login.swift in Sources */,
+				7A99D2492B46418100F1626C /* LoginViewModel.swift in Sources */,
 				7A99D2312B4524FF00F1626C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
