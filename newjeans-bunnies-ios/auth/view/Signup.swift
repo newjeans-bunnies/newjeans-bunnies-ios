@@ -11,6 +11,8 @@ import FlowKit
 
 struct Signup: View {
     
+    @StateObject var viewModel = SignupViewModel()
+    
     @Flow var navigation
     
     @State var userId: String = ""
@@ -50,16 +52,16 @@ struct Signup: View {
                 .font(.custom(pretendardSemiBold, size: 17))
             
             HStack(alignment: .center) {
-                TextField("아이디", text: $userId, prompt:Text("아이디").foregroundColor(FieldHintTextColor))
+                TextField("아이디", text: $userId, prompt:Text("아이디").foregroundColor(Color("FieldHintTextColor")))
                     .onChange(of: userId) { oldText, newText in
                         if newText.count > userIdmaxCharacterCount {
                             userId = String(newText.prefix(userIdmaxCharacterCount))
                         }
                     }
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .font(.custom(pretendardMedium, size: 18))
                     .padding()
-                    .background(FieldBackgroundColor)
+                    .background(Color("FieldBackgroundColor"))
                     .cornerRadius(13)
                     .textContentType(.name)
                     .keyboardType(.asciiCapable)
@@ -71,14 +73,14 @@ struct Signup: View {
                 }, label: {
                     Text("중복 확인")
                         .font(.custom(pretendardBold, size: 17))
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("ButtonTextColor"))
                         .frame(width: 100)
                 }
                 )
                 .controlSize(.large)
                 .buttonStyle(PlainButtonStyle())
                 .padding()
-                .background(ButtonBackgroundColor)
+                .background(Color("ButtonBackgroundColor"))
                 .cornerRadius(13)
             }
             
@@ -89,19 +91,19 @@ struct Signup: View {
             HStack(alignment: .center) {
                 if passwordHideStatus{
                     SecureField("비밀번호", text: $password, prompt:Text("비밀번호")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
                 } else {
                     TextField("비밀번호", text: $password, prompt:Text("비밀번호")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
@@ -113,25 +115,25 @@ struct Signup: View {
                 
             }
             .padding()
-            .background(FieldBackgroundColor)
+            .background(Color("FieldBackgroundColor"))
             .cornerRadius(13)
             
             HStack(alignment: .center) {
                 if checkPasswordHideStatus{
                     SecureField("비밀번호 확인", text: $checkPassword, prompt:Text("비밀번호 확인")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
                 } else {
                     TextField("비밀번호 확인", text: $checkPassword, prompt:Text("비밀번호 확인")
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("FieldHintTextColor"))
                         .font(.custom(pretendardMedium, size: 18))
                     )
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .textInputAutocapitalization(.never)
                     .textContentType(.password)
                     .keyboardType(.asciiCapable)
@@ -143,23 +145,23 @@ struct Signup: View {
                 
             }
             .padding()
-            .background(FieldBackgroundColor)
+            .background(Color("FieldBackgroundColor"))
             .cornerRadius(13)
             
             Text("전화번호")
                 .font(.custom(pretendardSemiBold, size: 17))
             
             HStack(alignment: .center) {
-                TextField("전화번호", text: $phoneNumber, prompt:Text("전화번호").foregroundColor(FieldHintTextColor))
+                TextField("전화번호", text: $phoneNumber, prompt:Text("전화번호").foregroundColor(Color("FieldHintTextColor")))
                     .onChange(of: phoneNumber) { oldText, newText in
                         if newText.count > phoneNumbermaxCharacterCount {
                             phoneNumber = String(newText.prefix(phoneNumbermaxCharacterCount))
                         }
                     }
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .font(.custom(pretendardMedium, size: 18))
                     .padding()
-                    .background(FieldBackgroundColor)
+                    .background(Color("FieldBackgroundColor"))
                     .cornerRadius(13)
                     .textContentType(.telephoneNumber)
                     .keyboardType(.phonePad)
@@ -168,29 +170,29 @@ struct Signup: View {
                 Button(action: {}, label: {
                     Text("인증번호 받기")
                         .font(.custom(pretendardBold, size: 17))
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("ButtonTextColor"))
                         .frame(width: 100)
                 }
                 )
                 .controlSize(.large)
                 .buttonStyle(PlainButtonStyle())
                 .padding()
-                .background(ButtonBackgroundColor)
+                .background(Color("ButtonBackgroundColor"))
                 .cornerRadius(13)
             }
             
             HStack(alignment: .center) {
-                TextField("전화번호 인증", text: $certificationNumber, prompt:Text("전화번호 인증")                    .foregroundColor(FieldHintTextColor))
+                TextField("전화번호 인증", text: $certificationNumber, prompt:Text("전화번호 인증")                    .foregroundColor(Color("FieldHintTextColor")))
                 
                     .onChange(of: certificationNumber) { oldText, newText in
                         if newText.count > certificationNumbermaxCharacterCount {
                             certificationNumber = String(newText.prefix(certificationNumbermaxCharacterCount))
                         }
                     }
-                    .foregroundColor(FieldTextColor)
+                    .foregroundColor(Color("FieldTextColor"))
                     .font(.custom(pretendardMedium, size: 18))
                     .padding()
-                    .background(FieldBackgroundColor)
+                    .background(Color("FieldBackgroundColor"))
                     .cornerRadius(13)
                     .textContentType(.oneTimeCode)
                     .keyboardType(.numberPad)
@@ -198,28 +200,28 @@ struct Signup: View {
                 Button(action: {}, label: {
                     Text("확인")
                         .font(.custom(pretendardBold, size: 17))
-                        .foregroundColor(FieldHintTextColor)
+                        .foregroundColor(Color("ButtonTextColor"))
                         .frame(width: 100)
                 }
                 )
                 .controlSize(.large)
                 .buttonStyle(PlainButtonStyle())
                 .padding()
-                .background(ButtonBackgroundColor)
+                .background(Color("ButtonBackgroundColor"))
                 .cornerRadius(13)
             }
             
             Text("나라")
                 .font(.custom(pretendardSemiBold, size: 17))
             
-            HStack(spacing: 1) {
+            HStack(spacing:7) {
                 ForEach(items, id: \.self) { country in
-                    SelectCountryRadioButton(text: country, country: selectCountry)
+                    SelectCountryRadioButton(text: country)
                 }
             }
-            .padding()
+            .padding(.vertical, 5)
             .frame(maxWidth: .infinity, alignment: .center)
-            .background(GroupRadioBackgroundColor)
+            .background(Color("GroupRadioBackgroundColor"))
             .cornerRadius(13)
             
             Button(action: {
@@ -227,14 +229,14 @@ struct Signup: View {
             }, label: {
                 Text("계정 만들기")
                     .font(.custom(pretendardBold, size: 17))
-                    .foregroundColor(ButtonTextColor)
+                    .foregroundColor(Color("ButtonTextColor"))
                     .frame(maxWidth: .infinity)
             }
             )
             .controlSize(.large)
             .buttonStyle(PlainButtonStyle())
             .padding()
-            .background(ButtonBackgroundColor)
+            .background(Color("ButtonBackgroundColor"))
             .cornerRadius(13)
             
         }

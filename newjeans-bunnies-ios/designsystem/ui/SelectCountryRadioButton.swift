@@ -9,31 +9,29 @@ import SwiftUI
 
 struct SelectCountryRadioButton: View {
     
-    let text: String
-    let country: String
+    @StateObject var viewModel = SignupViewModel()
     
-    init(
-        text: String,
-        country: String
-    ){
+    let text: String
+    
+    init(text: String){
         self.text = text
-        self.country = country
     }
     var body: some View{
         Button(action: {
-            
+            viewModel.country = text
         }, label: {
             Text(text)
-                .font(.custom(pretendardBold, size: 17))
-                .foregroundColor(RadioButtonTextColor)
+                .font(.custom(pretendardBold, size: 20))
+                .foregroundColor(Color("RadioButtonTextColor"))
         })
-        .padding()
-        .background(ButtonBackgroundColor)
+        .padding(.horizontal, 25)
+        .padding(.vertical, 13)
+        .background(text == viewModel.country ? Color("ButtonBackgroundColor") : Color("GroupRadioBackgroundColor"))
         .cornerRadius(13)
     }
 }
 
 
 #Preview{
-    SelectCountryRadioButton(text: "KR", country: "KR")
+    SelectCountryRadioButton(text: "KR")
 }
