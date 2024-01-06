@@ -92,9 +92,9 @@ struct Login: View {
                 Text("로그인 유지하기")
                     .font(.custom(pretendardSemiBold, size: 16))
             }
-            .padding(.trailing, 180)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, 5)
-            .padding(.top, 10)
+            .padding(.leading, 10)
             .frame(maxWidth: .infinity)
             
             
