@@ -10,3 +10,4 @@ let passwordmaxCharacterCount = 50
 let passwordminCharacterCount = 10
 let phoneNumbermaxCharacterCount = 11
 let certificationNumbermaxCharacterCount = 6
+let birthMaxCharacterCount = 8

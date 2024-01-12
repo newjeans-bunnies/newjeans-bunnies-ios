@@ -20,6 +20,7 @@ struct Signup: View {
     @State var checkPassword: String = ""
     @State var phoneNumber: String = ""
     @State var certificationNumber : String = ""
+    @State var dirth: String = ""
     
     @State var passwordHideStatus: Bool = false
     @State var checkPasswordHideStatus: Bool = false
@@ -74,7 +75,7 @@ struct Signup: View {
                         
                     }, label: {
                         Text("중복 확인")
-                            .font(.custom(pretendardSemiBold, size: 17))
+                            .font(.custom(pretendardBold, size: 17))
                             .foregroundColor(Color("ButtonTextColor"))
                             .frame(width: 100)
                     }
@@ -231,6 +232,27 @@ struct Signup: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color("GroupRadioBackgroundColor"))
                 .cornerRadius(13)
+                
+                Text("생년월일")
+                    .font(.custom(pretendardSemiBold, size: 17))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 30)
+                
+                TextField("생년월일", text: $dirth, prompt:Text("YYYY-MM-DD").foregroundColor(Color("FieldHintTextColor")))
+                    .onChange(of: dirth) { oldText, newText in
+                        if newText.count > birthMaxCharacterCount {
+                            dirth = String(newText.prefix(birthMaxCharacterCount))
+                        }
+                    }
+                    .foregroundColor(Color("FieldTextColor"))
+                    .font(.custom(pretendardMedium, size: 18))
+                    .padding()
+                    .background(Color("FieldBackgroundColor"))
+                    .cornerRadius(13)
+                    .textContentType(.birthdate)
+                    .textInputAutocapitalization(.never)
+                
+                
                 
                 
                 Text("아래 약관에 모두 동의 합니다")

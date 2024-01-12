@@ -24,7 +24,7 @@ struct SelectCountryRadioButton: View {
                 .font(.custom(pretendardBold, size: 20))
                 .foregroundColor(Color("RadioButtonTextColor"))
         })
-        .padding(.horizontal, 25)
+        .padding(.horizontal, 20)
         .padding(.vertical, 13)
         .background(text == viewModel.country ? Color("ButtonBackgroundColor") : Color("GroupRadioBackgroundColor"))
         .cornerRadius(13)
